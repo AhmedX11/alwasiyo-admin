@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --forest: #0a3622;
+  --forest-deep: #062418;
+  --forest-mid: #145c3b;
+  --gold: #c9a54a;
+  --gold-bright: #e4c56a;
+  --cream: #f6f1e4;
+  --cream-dark: #ebe3cf;
+  --ink: #12231b;
+  --muted: #5b6b62;
+  --background: var(--cream);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-forest: var(--forest);
+  --color-forest-deep: var(--forest-deep);
+  --color-forest-mid: var(--forest-mid);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-plus-jakarta);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--gold) 45%, white);
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+}
